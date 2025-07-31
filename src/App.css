@@ -440,6 +440,12 @@ a:hover {
   .section {
     padding: 30px 0;
   }
+  .harsh {
+    margin-top: 50px;
+  }
+  .experience-line {
+    display: none;
+  }
 }
 
 /* Smooth Transitions */

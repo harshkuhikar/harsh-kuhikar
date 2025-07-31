@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Github, Zap, ShoppingCart, Recycle } from 'lucide-react';
+import React, { useEffect, useRef, useState } from "react";
+import { ArrowDown, Github, Zap, ShoppingCart, Recycle } from "lucide-react";
 
 const Projects: React.FC = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -9,7 +9,8 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: "AI Application (Senaptiq)",
-      description: "React.js frontend for an AI-based tool with advanced machine learning capabilities. Collaborated with backend team using Node.js to create seamless user experience.",
+      description:
+        "React.js frontend for an AI-based tool with advanced machine learning capabilities. Collaborated with backend team using Node.js to create seamless user experience.",
       tech: ["React.js", "Node.js", "AI/ML", "REST APIs", "SCSS"],
       icon: <Zap className="w-8 h-8" />,
       color: "from-cyan-400 to-blue-500",
@@ -19,13 +20,14 @@ const Projects: React.FC = () => {
         "AI-powered analytics dashboard",
         "Real-time data processing",
         "Interactive data visualizations",
-        "Responsive design across devices"
-      ]
+        "Responsive design across devices",
+      ],
     },
     {
       id: 2,
       title: "Alibaba-like E-Commerce Platform",
-      description: "Developed full frontend for a comprehensive B2B ecommerce platform similar to Alibaba. Features include product catalogs, user management, and order processing.",
+      description:
+        "Developed full frontend for a comprehensive B2B ecommerce platform similar to Alibaba. Features include product catalogs, user management, and order processing.",
       tech: ["React.js", "Redux", "Bootstrap", "JavaScript", "PHP"],
       icon: <ShoppingCart className="w-8 h-8" />,
       color: "from-purple-400 to-pink-500",
@@ -35,13 +37,14 @@ const Projects: React.FC = () => {
         "Multi-vendor marketplace",
         "Advanced search & filtering",
         "Real-time chat system",
-        "Payment gateway integration"
-      ]
+        "Payment gateway integration",
+      ],
     },
     {
       id: 3,
       title: "WOW Recycle Website",
-      description: "Sustainability-focused platform built with Bootstrap & ReactJS. Promotes environmental consciousness through innovative recycling solutions.",
+      description:
+        "Sustainability-focused platform built with Bootstrap & ReactJS. Promotes environmental consciousness through innovative recycling solutions.",
       tech: ["React.js", "Bootstrap", "JavaScript", "SCSS", "Node.js"],
       icon: <Recycle className="w-8 h-8" />,
       color: "from-green-400 to-teal-500",
@@ -51,24 +54,24 @@ const Projects: React.FC = () => {
         "Eco-friendly product catalog",
         "Carbon footprint calculator",
         "Educational resources",
-        "Community engagement features"
-      ]
-    }
+        "Community engagement features",
+      ],
+    },
   ];
 
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: "0px 0px -50px 0px",
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const cards = entry.target.querySelectorAll('.project-card');
+          const cards = entry.target.querySelectorAll(".project-card");
           cards.forEach((card, index) => {
             setTimeout(() => {
-              card.classList.add('animate-in');
+              card.classList.add("animate-in");
             }, index * 200);
           });
         }
@@ -93,11 +96,17 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="section relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 opacity-50" />
-      
-      <div ref={projectsRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <div
+        ref={projectsRef}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+      >
         <div className="text-center mb-16 fade-in">
           <h2 className="text-4xl md:text-6xl font-black font-orbitron text-white mb-4">
-            FEATURED <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">PROJECTS</span>
+            FEATURED{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              PROJECTS
+            </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Showcasing innovative solutions and cutting-edge implementations
@@ -106,22 +115,29 @@ const Projects: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={project.id} className="project-card opacity-0 transform translate-y-10 transition-all duration-700">
-              <div 
+            <div
+              key={project.id}
+              className="project-card opacity-0 transform translate-y-10 transition-all duration-700"
+            >
+              <div
                 className="glass-dark p-6 rounded-2xl hover-cursor transform-3d card-3d group relative overflow-hidden cursor-pointer"
                 onClick={() => handleProjectClick(project.id)}
               >
                 {/* Status badge */}
                 <div className="absolute top-4 right-4 z-10">
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                    project.status === 'Live' ? 'bg-green-500' : 'bg-blue-500'
-                  } text-white`}>
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-bold ${
+                      project.status === "Live" ? "bg-green-500" : "bg-blue-500"
+                    } text-white`}
+                  >
                     {project.status}
                   </span>
                 </div>
 
                 {/* Project icon */}
-                <div className={`project-icon p-4 rounded-full bg-gradient-to-r ${project.color} text-white mb-6 inline-block floating`}>
+                <div
+                  className={`project-icon p-4 rounded-full bg-gradient-to-r ${project.color} text-white mb-6 inline-block floating`}
+                >
                   {project.icon}
                 </div>
 
@@ -140,7 +156,7 @@ const Projects: React.FC = () => {
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIndex) => (
-                      <span 
+                      <span
                         key={techIndex}
                         className="px-3 py-1 bg-gray-800 text-cyan-400 rounded-full text-xs font-medium"
                       >
@@ -153,9 +169,14 @@ const Projects: React.FC = () => {
                 {/* Expandable features */}
                 {selectedProject === project.id && (
                   <div className="mb-6 space-y-2 animate-in">
-                    <h4 className="text-cyan-400 font-semibold text-sm">Key Features:</h4>
+                    <h4 className="text-cyan-400 font-semibold text-sm">
+                      Key Features:
+                    </h4>
                     {project.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2">
+                      <div
+                        key={featureIndex}
+                        className="flex items-center space-x-2"
+                      >
                         <div className="w-2 h-2 bg-cyan-400 rounded-full" />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
@@ -166,8 +187,8 @@ const Projects: React.FC = () => {
                 {/* Action buttons */}
                 <div className="flex space-x-3">
                   <button className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-sm font-medium hover:scale-105 transition-transform">
-                    <ExternalLink size={16} />
-                    <span>View Live</span>
+                    <ArrowDown size={16} />
+                    <span>Show more</span>
                   </button>
                   <button className="flex items-center space-x-2 px-4 py-2 glass text-gray-300 rounded-full text-sm font-medium hover:scale-105 transition-transform">
                     <Github size={16} />

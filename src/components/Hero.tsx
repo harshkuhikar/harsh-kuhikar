@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
       {/* Particle container */}
       <div className="particle-container absolute inset-0 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 harsh">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
           {/* Left side - Text content */}
           <div className="space-y-8">
@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
               <div className="hero-contact floating-contact glass p-4 rounded-lg hover-lift hover-glow transition-all duration-300 opacity-0 transform translate-y-5">
                 <div className="flex items-center space-x-3">
                   <MapPin className="text-cyan-400" size={20} />
-                  <span className="text-gray-300">Vastral, Ahmedabad</span>
+                  <span className="text-gray-300">India</span>
                 </div>
               </div>
 
@@ -157,13 +157,15 @@ const Hero: React.FC = () => {
 
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://github.com/harshkuhikar"
                   className="hero-contact glass p-3 rounded-full hover-lift hover-glow transition-all duration-300 opacity-0 transform translate-y-5"
                 >
                   <Github className="text-cyan-400" size={24} />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/harsh-kuhikar/"
                   className="hero-contact glass p-3 rounded-full hover-lift hover-glow transition-all duration-300 opacity-0 transform translate-y-5"
                 >
                   <Linkedin className="text-cyan-400" size={24} />
