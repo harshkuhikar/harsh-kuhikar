@@ -1,5 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowDown, Github, Zap, ShoppingCart, Recycle } from "lucide-react";
+import {
+  ArrowDown,
+  Github,
+  Zap,
+  ShoppingCart,
+  Recycle,
+  TreePine,
+  Landmark,
+} from "lucide-react";
 
 const Projects: React.FC = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -56,6 +64,48 @@ const Projects: React.FC = () => {
         "Educational resources",
         "Community engagement features",
       ],
+    },
+    {
+      id: 4,
+      title: "Sonal Agritech",
+      description:
+        "Sonal Agritech specializes in landscaping, horticulture, hardscaping, highway beautification and sustainable gardening solutions-offering organic fertilizers, urban greenery, tree care and agro-forestry services with an eco-first ethos.",
+      tech: ["HTML", "CSS", "JavaScript", "jQuery", "Tailwind", "GSAP"],
+      icon: <TreePine className="w-8 h-8" />,
+      color: "from-green-400 to-teal-500",
+      year: "2023",
+      status: "Live",
+      features: [
+        "Professional landscaping and horticulture services",
+        "Eco-friendly products and organic fertilizers",
+        "Highway beautification and urban greenery solutions",
+        "Tree care, plantation, and agro-forestry initiatives",
+      ],
+    },
+    {
+      id: 6,
+      title: "Abu Hills",
+      description:
+        "Abu Hills is a scenic tourism and hospitality destination offering resort stays, outdoor adventure, event hosting, and eco-friendly experiences in the lush landscapes of Mount Abu, Rajasthan.",
+      tech: [
+        "React",
+        "Tailwind",
+        "Framer Motion",
+        "Swiper.js",
+        "GSAP",
+        "LottieFiles",
+      ],
+      icon: <Landmark className="w-8 h-8" />,
+      color: "from-blue-400 to-cyan-500",
+      year: "2024",
+      status: "Live",
+      features: [
+        "Luxury resort and nature stay experiences",
+        "Event and wedding hosting in scenic locations",
+        "Adventure tourism and eco-friendly activities",
+        "Immersive virtual tour and online booking system",
+      ],
+      link: "https://abu-hills.netlify.app/",
     },
   ];
 
@@ -204,7 +254,7 @@ const Projects: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .project-card.animate-in {
           opacity: 1;
           transform: translateY(0);
