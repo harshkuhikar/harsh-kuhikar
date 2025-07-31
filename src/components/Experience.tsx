@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      title: "Frontend Developer",
+      title: "Fullstack Developer",
       company: "Scalezix",
       period: "2024 - Present",
       location: "Remote",

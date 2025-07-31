@@ -111,14 +111,14 @@ const Hero: React.FC = () => {
                 ref={subtitleRef}
                 className="text-xl md:text-2xl text-gray-300 font-medium opacity-0 transform translate-y-10 transition-all duration-1000"
               >
-                Frontend Developer | UI Designer | React.js Developer
+                FullStack Developer | UI Designer | React.js Developer
               </p>
 
               <p
                 ref={taglineRef}
                 className="text-lg text-cyan-300 font-light italic opacity-0 transform translate-y-10 transition-all duration-1000"
               >
-                "I turn designs into reality with clean, animated, responsive
+                "Turning designs into reality with clean, animated, responsive
                 code."
               </p>
             </div>
