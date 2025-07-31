@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Send, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import harsh from "../harsh.jpg";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -198,15 +199,16 @@ const Contact: React.FC = () => {
             {/* 3D animated element */}
             <div className="glass-dark p-6 rounded-2xl text-center">
               <div className="w-32 h-32 mx-auto mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center pulse">
-                <div className="w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center">
+                <div className="w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center">
                   <span
                     className="text-2xl font-bold text-cyan-400"
                     style={{
                       height: "100%",
+                      width: "100%",
                     }}
                   >
                     <img
-                      src="https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE="
+                      src={harsh}
                       alt=""
                       style={{
                         height: "100%",
